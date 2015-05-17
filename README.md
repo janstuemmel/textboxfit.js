@@ -13,6 +13,10 @@ bower install textboxfit
 
 ...or just download it.
 
+## Demo
+
+http://janstuemmel.github.io/textboxfit.js/demo.html
+
 ##Usage
 
 ```html
