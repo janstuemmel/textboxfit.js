@@ -1,42 +1,54 @@
-var tfit = function($nodes, options) {
+(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    } else {
+        factory(jQuery);
+    }
+}(function ($) {
 
-    return $nodes.each(function(){
+    var textboxfit = function($nodes, options) {
 
-        var settings = {
-            maxFontSize: 48,
-            minFontSize: 12,
-            fixSize: false
-        };
+        return $nodes.each(function(){
 
-        $.extend(settings, options);
+            var settings = {
+                maxFontSize: 48,
+                minFontSize: 12,
+                fixSize: false
+            };
 
-        var node = $(this);
+            $.extend(settings, options);
 
-        var orgText = node.html();
-        var fontSize = settings.minFontSize;
+            var node = $(this);
 
-        $(this).css('fontSize', fontSize);
+            var orgText = node.html();
+            var fontSize = settings.minFontSize;
 
-        var height = (parseInt(node.css('min-height')) != 0) ? parseInt(node.css('min-height')) : node.height();
-        var width = (parseInt(node.css('min-width')) != 0) ? parseInt(node.css('min-width')) : node.width();
+            $(this).css('fontSize', fontSize);
 
-        $(this).html("<span>"+orgText+"</span>");
+            var height = (parseInt(node.css('min-height')) != 0) ? parseInt(node.css('min-height')) : node.height();
+            var width = (parseInt(node.css('min-width')) != 0) ? parseInt(node.css('min-width')) : node.width();
 
-        var heightSpan = $(this).find('span').height();
-        var widthSpan = $(this).find('span').width();
+            $(this).html("<span>"+orgText+"</span>");
 
-        if(heightSpan < height) {
-            while(fontSize <= settings.maxFontSize && widthSpan < width && heightSpan < height) {
+            var heightSpan = $(this).find('span').height();
+            var widthSpan = $(this).find('span').width();
 
-                widthSpan = node.find('span').width();
-                heightSpan = node.find('span').height();
-                node.css('font-size', fontSize++);
+            if(heightSpan < height) {
+                while(fontSize <= settings.maxFontSize && widthSpan < width && heightSpan < height) {
+
+                    widthSpan = node.find('span').width();
+                    heightSpan = node.find('span').height();
+                    node.css('font-size', fontSize++);
+                }
+                if(settings.fixSize) node.css({'height': heightSpan, 'min-height': heightSpan });
             }
-            if(settings.fixSize) node.css({'height': heightSpan, 'min-height': heightSpan });
-        }
-    });
-};
+        });
+    };
 
-$.fn.tfit = function(options) {
-  return tfit(this, options);
-};
+    $.fn.textboxfit = function(options) {
+        return textboxfit(this, options);
+    };
+}));
+
+
+
