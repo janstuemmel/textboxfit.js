@@ -17,30 +17,31 @@ bower install textboxfit
 <!-- index.html -->
 
 <html>
-<head><title>Textboxfit</title></head>
+<head>
+    <title>Textboxfit</title>
+    <script src="bower_components/textboxfit/textboxfit.js"></script>
+    <style>
+        .box{
+            /* both required*/
+            width: 300px;
+            min-height: 200px;
+        }
+    </style>
+    <script>
+        S(document).ready(function(){
+            $('.box').textboxfit({
+                // default options
+                minFontSize: 48,
+                maxFontSize: 12,
+                fixSize: false
+            });
+        });
+    </script>
+</head>
 <body>
     <div class="box">A text</div>
     <div class="box">foo</div>
     <div class="box">Lorem Ipsum</div>
 </body>
 </html>
-```
-
-```css
-/* style.css */
-.box{
-    width: 300px
-    min-height: 200px
-}
-```
-
-```javascript
-// main.js
-S(document).ready(function(){
-    $('.box').textboxfit({
-        minFontSize: 48,
-        maxFontSize: 14,
-        fixSize: false
-    });
-});
 ```
