@@ -1,6 +1,7 @@
 # textboxfit.js
 
-A tiny jquery plugin for google keep like textfitting
+A tiny jquery plugin for google keep like textfitting.
+It's AMD ready for use with requirejs.
 
 ## Install
 
@@ -14,8 +15,6 @@ bower install textboxfit
 ##Usage
 
 ```html
-<!-- index.html -->
-
 <html>
 <head>
     <title>Textboxfit</title>
@@ -45,3 +44,9 @@ bower install textboxfit
 </body>
 </html>
 ```
+
+## Todo
+
+* Bind resize for responsive boxes
+* allow width orientation
+* provide min package
