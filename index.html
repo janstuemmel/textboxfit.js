@@ -8,7 +8,6 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <script src="https://raw.githubusercontent.com/janstuemmel/textboxfit.js/master/textboxfit.js" type="text/plain"></script>
   </head>
   <body>
     <section class="page-header">
@@ -20,8 +19,54 @@
     </section>
 
     <section class="main-content">
-      <h3>Install</h3>
-      <pre><code>bower install textboxfit</code></pre>
+      <h1>
+<a id="textboxfitjs" class="anchor" href="#textboxfitjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>textboxfit.js</h1>
+
+<p>A tiny jquery plugin for google keep like textfitting.
+It's AMD ready for use with requirejs.</p>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<p>Install textboxfit with bower</p>
+
+<pre><code>bower install textboxfit
+</code></pre>
+
+<p>...or just download it.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">html</span>&gt;
+&lt;<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">title</span>&gt;Textboxfit&lt;/<span class="pl-ent">title</span>&gt;
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>bower_components/textboxfit/textboxfit.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">style</span>&gt;</span>
+<span class="pl-s1">        <span class="pl-e">.box</span>{</span>
+<span class="pl-s1">            <span class="pl-c">/* both required*/</span></span>
+<span class="pl-s1">            <span class="pl-c1"><span class="pl-c1">width</span></span>: <span class="pl-c1">300<span class="pl-k">px</span></span>;</span>
+<span class="pl-s1">            <span class="pl-c1"><span class="pl-c1">min-height</span></span>: <span class="pl-c1">200<span class="pl-k">px</span></span>;</span>
+<span class="pl-s1">        }</span>
+<span class="pl-s1">    &lt;/<span class="pl-ent">style</span>&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">        S(<span class="pl-c1">document</span>).ready(<span class="pl-k">function</span>(){</span>
+<span class="pl-s1">            $(<span class="pl-s"><span class="pl-pds">'</span>.box<span class="pl-pds">'</span></span>).textboxfit({</span>
+<span class="pl-s1">                <span class="pl-c">// default options</span></span>
+<span class="pl-s1">                minFontSize<span class="pl-k">:</span> <span class="pl-c1">48</span>,</span>
+<span class="pl-s1">                maxFontSize<span class="pl-k">:</span> <span class="pl-c1">12</span>,</span>
+<span class="pl-s1">                fixSize<span class="pl-k">:</span> <span class="pl-c1">false</span></span>
+<span class="pl-s1">            });</span>
+<span class="pl-s1">        });</span>
+<span class="pl-s1">    &lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">head</span>&gt;
+&lt;<span class="pl-ent">body</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>box<span class="pl-pds">"</span></span>&gt;A text&lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>box<span class="pl-pds">"</span></span>&gt;foo&lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>box<span class="pl-pds">"</span></span>&gt;Lorem Ipsum&lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/janstuemmel/textboxfit.js">Textboxfit.js</a> is maintained by <a href="https://github.com/janstuemmel">janstuemmel</a>.</span>
 
