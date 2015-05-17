@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>tfit js test</title>
+    <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="textboxfit.js"></script>
+    <style>
+        body {
+            background: #e0e0e0;
+        }
+        .box {
+            width:250px;
+            padding: 10px;
+            min-height: 100px;
+            background:#ffffff;
+            font-family: 'Slabo 27px';
+            margin-bottom:10px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('.box').textboxfit({
+                minFontSize: 18,
+                maxFontSize: 56
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="box">A notice here with wrap</div>
+    <div class="box">A letter</div>
+    <div class="box">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </div>
+</body>
+</html>
