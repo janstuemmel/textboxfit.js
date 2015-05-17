@@ -6,7 +6,7 @@
     "Jan Stümmel <info@janstuemmel.de>"
   ],
   "description": "A tiny jquery plugin for google keep like textfitting",
-  "main": "textfitbox.js",
+  "main": "textboxfit.js",
   "keywords": [
     "textfit",
     "box",
