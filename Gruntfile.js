@@ -6,14 +6,14 @@ module.exports = function(grunt) {
 
         uglify: {
             build: {
-                src: 'textboxfit.js',
+                src: 'src/textboxfit.js',
                 dest: 'dist/textboxfit.min.js'
             }
         },
 
         copy: {
             main: {
-                src: 'textboxfit.js',
+                src: 'src/textboxfit.js',
                 dest: 'dist/textboxfit.js'
             }
         }

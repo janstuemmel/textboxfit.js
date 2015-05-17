@@ -23,7 +23,7 @@ http://janstuemmel.github.io/textboxfit.js/demo.html
 <html>
 <head>
     <title>Textboxfit</title>
-    <script src="bower_components/textboxfit/textboxfit.js"></script>
+    <script src="bower_components/textboxfit/dist/textboxfit.js"></script>
     <style>
         .box{
             /* both required*/
