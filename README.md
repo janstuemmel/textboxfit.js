@@ -8,9 +8,10 @@ It's AMD ready for use with requirejs.
 Install textboxfit with bower
 
 ```
-npm install bower -g
 bower install textboxfit
 ```
+
+...or just download it.
 
 ##Usage
 
